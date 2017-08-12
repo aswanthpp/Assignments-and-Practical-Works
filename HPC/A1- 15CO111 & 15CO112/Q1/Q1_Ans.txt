@@ -1,0 +1,77 @@
+## REPORT ON QN 1
+
+## ARVIND RAMACHANDRAN - 15CO111
+## ASWANTH P. P. - 15CO112
+
+
+
+Q1. Write the device query code, compile and run it on your system. Query enough information to know all the details of
+    your device. Example queries: GPU card's name, GPU computation capabilities, Maximum number of block dimensions,
+    Maximum number of grid dimensions, Maximum size of GPU memory, Amount of constant and share memory, Warp
+    size, etc. Answer the following questions in your report.
+
+1) What is the architecture and compute capability of your GPU?
+
+A. Architecture = Kepler 
+   Compute Capability = 3.5
+
+2) What are the maximum block dimensions for your GPU?
+
+A. Maximum dimension 0 of block:  1024
+   Maximum dimension 1 of block:  1024
+   Maximum dimension 2 of block:  64
+
+3) Suppose you are launching a one dimensional grid and block. If the hardware's maximum grid dimension is
+   65535 and the maximum block dimension is 512, what is the maximum number threads can be launched on the
+   GPU?
+
+A. 512
+
+4) Under what conditions might a programmer choose not want to launch the maximum number of threads?
+
+A. The number of threads that should be spawned in the kernel depends upon the size of the data that the threads operate on.
+   For e.g., addition of 2 1-dimensional arrays, each containing 4 elements requires only 4 threads. Each thread will perform one addition operation.
+   The remaining threads which are spawned do not execute the kernel code. Also, thread creation and termination will consume some time,causing unnecessary
+   performance losses.
+
+5) What can limit a program from launching the maximum number of threads on a GPU?
+
+A. The number of threads that can be launched depends on the number of resources used by each thread. SMs have finite resources of threads and
+   local memory. If the amount of resources used per thread is high, we may not be able to hit the theoretical maximum no. of threads.
+
+6) What is shared memory? How much shared memory is on your GPU?
+
+A. The CUDA C compiler treats variables in shared memory differently than typical variables. It creates a copy of the variable for each block that you launch on the GPU.
+   Every thread in that block shares the memory, but threads cannot see or modify the copy of this variable that is seen within other blocks. This provides an excellent
+   means by which threads within a block can communicate and collaborate on computations. Furthermore, shared memory buffers reside physically on the GPU as opposed to
+   residing in off-chip DRAM. Because of this, the latency to access shared memory tends to be far lower than typical buffers, making shared memory effective as a
+   per-block, software managed cache or scratchpad.
+
+   Total shared memory per block = 49152
+
+7) What is global memory? How much global memory is on your GPU?
+
+A. However, if your program is using too much shared memory to store data, or your threads simply need to share too much data at once, then it is possible that the
+   shared memory is not big enough to accommodate all the data that needs to be shared among the threads. In such a situation, threads always have the option of writing
+   to and reading from global memory. Global memory is much slower than accessing shared memory; however, global memory is much larger.
+
+   Total global memory = 3405643776
+
+8) What is constant memory? How much constant memory is on your GPU?
+
+A. We use constant memory for data that will not change over the course of a kernel execution. In some situations, using constant memory rather than global memory will
+   reduce the required memory bandwidth. The constant memory space is cached. As a result, a read from constant memory costs one memory read from device memory only on a
+   cache miss; otherwise, it just costs one read from the constant cache.
+
+   Total constant memory = 65536
+
+9) What does warp size signify on a GPU? What is your GPU’s warp size?
+
+A. Warp size is the number of threads in a warp, which is a sub-division used in the hardware implementation to coalesce memory access and instruction dispatch.
+
+   Warp Size = 32 threads
+
+10) Is double precision supported on your GPU?
+
+A. Yes.
+   Peak Double Precision floating point performance (GFLOP) = 1.43 Tflops
