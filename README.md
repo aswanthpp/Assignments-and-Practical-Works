@@ -1,5 +1,8 @@
 # Lab_Works
-<h1>Computer Networks Programs </h1><br>
-Lab-1 -> Shell Script Install and Configuring NS# and Wireshark on Ubuntu<br>
-Lab-3 -> mytop.cc -> 3 node cyclic topology on each act as client and server in cyclic order.<br>
-		mybulksend.cc -> just modification off tcp bulk send where 1st node send bulk data using tcp to 4th node intermediate acts router with the help populateRouting table <br>
+CN-Computer Networks (5th Semester) <br>
+DDS -Design of Digital Systems(3rd Semester)<br>
+DSA - Data Structres and ALgorithms (3rd Semester)<br>
+HPC -Hetereogenious Parallel Computing(5th Semester)<br>
+OOP- Object Oriented Programming (4th Semester )<br>
+OS - Operating Systems (4th Semester ) <br>
+SE - Software Engineering (4th Semester)<br>
