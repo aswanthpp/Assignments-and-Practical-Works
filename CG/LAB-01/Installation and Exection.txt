@@ -1,0 +1,19 @@
+1. Installing OpenGL
+
+		sudo apt-get install build-essential libgl1-mesa-dev  # Debian, Ubuntu
+
+		sudo apt-get install libglew-dev libsdl2-dev libsdl2-image-dev libglm-dev libfreetype6-dev  # Debian, Ubuntu
+
+	check installation proper :
+
+		glxinfo | grep OpenGL
+
+	GL library in "usr/include"
+
+2. Exection of example.c
+	
+	gcc example.c -o gl -lGL -lGLU -lglut
+
+3. Run :
+	
+	./gl
