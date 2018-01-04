@@ -4,6 +4,12 @@
 
 		sudo apt-get install libglew-dev libsdl2-dev libsdl2-image-dev libglm-dev libfreetype6-dev  # Debian, Ubuntu
 
+
+					or
+
+		sudo apt-get install freeglut3-dev
+
+
 	check installation proper :
 
 		glxinfo | grep OpenGL
