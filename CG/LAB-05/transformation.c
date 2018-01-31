@@ -64,7 +64,7 @@ void main(int argc,char **argv){
 	glutInitDisplayMode(GLUT_RGB|GLUT_SINGLE);
 	glutInitWindowSize(600,600);
 	glutInitWindowPosition(0,0);
-	glutCreateWindow("Mouse Keyboard Interaction");
+	glutCreateWindow("Transformation");
 	init();
 	glutDisplayFunc(display);
 	//glutMouseFunc(mouse);
