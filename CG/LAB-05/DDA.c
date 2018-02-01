@@ -19,10 +19,10 @@ void DDA(int X0, int Y0, int X1, int Y1)
     float Y = Y0;
     for (int i = 0; i <= steps; i++)
     {
-        putpixel (X,Y,RED); 
+        putpixel (X,Y,GREEN); 
         X += Xinc;           
-        Y += Yinc;           
-        delay(10);        
+        Y += Yinc;
+	delay(5);                
     }
 }
  
@@ -31,6 +31,9 @@ int main()
     int gd = DETECT, gm;
     initgraph (&gd, &gm, "");   
     DDA(0,0,640,480);
+    DDA(320,0,320,480);
+    DDA(640,0,0,480);
+    DDA(640,240,0,240);    
     getchar();
     return 0;
 } 

@@ -54,7 +54,7 @@ void createMenu(void){
     glutAddMenuEntry("Triangle", 3);     
     menu_id = glutCreateMenu(menu);
     glutAddSubMenu("Draw", submenu_id);
-    glutAddMenuEntry("Clear", 0);
+    //glutAddMenuEntry("Clear", 0);
     glutAddMenuEntry("Quit", 1);     
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 } 
