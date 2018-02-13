@@ -1,4 +1,11 @@
-# Lab_Works
+# Lab Works
+<div>
+	<h3>
+	This repository contains all the daily lab works that have done as part of my 
+	B.Tech udergraduate in CSE through the lab courses that are part of curriculum</h3>
+<h4><b>NB</b>:All the projects code are in seperated repository under  <a url="https://github.com/aswanthpp">https://github.com/aswanthpp/</a>
+</div>
+
 <table>
 <th>Shortform</th>
 <th>Course Code</th>
@@ -17,6 +24,13 @@
 <td>Compter Graphics</td>
 <td>6</td>
 </tr>
+<tr>
+<td>CN</td>
+<td>CO302</td>
+<td>Computer Networks</td>
+<td>5</td>
+</tr>
+
 <tr>
 <td>DDS</td>
 <td>CO204</td>
