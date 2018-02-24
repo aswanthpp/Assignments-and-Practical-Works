@@ -12,6 +12,14 @@
 <th>Course Name</th>
 <th>Semester</th>
 <tr>
+<td>ADS</td>
+<td>CO360</td>
+<td>Advance Data Structures</td>
+<td>6</td>
+</tr>
+ 
+
+<tr>
 <td>CD</td>
 <td>CO351</td>
 <td>Compiler Design</td>
